@@ -1,50 +1,39 @@
 <html>
 <head>
   <title>Der Bach</title>
-  <style>
-  /* Navigation bar */
+<style>
+  /* Navbar styles */
   .navbar {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    height: 50px;
-    background-color: #333;
+    justify-content: space-between;
   }
-
-  /* Navigation links */
-  .navbar a {
-    color: #f2f2f2;
-    text-decoration: none;
-    padding: 0 20px;
-  }
-
-  /* Hamburger menu button */
-  .hamburger-menu {
-    display: none;
-    cursor: pointer;
-  }
-
-  /* Desktop navigation links */
-  .navbar-desktop {
+  
+  .navbar-menu {
     display: flex;
   }
-
-  /* Mobile navigation links */
-  .navbar-mobile {
+  
+  .navbar-menu a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  /* Hamburger menu styles */
+  .navbar-hamburger-menu {
     display: none;
   }
-
-  /* Show mobile menu when screen is less than 600px wide */
-  @media screen and (max-width: 600px) {
-    .navbar-desktop {
+  
+  /* Media queries to show/hide navbar and hamburger menu on different screen sizes */
+  @media only screen and (max-width: 640px),
+        only screen and (max-width: 768px),
+        only screen and (max-width: 1024px) {
+    .navbar-menu {
       display: none;
     }
-
-    .navbar-mobile {
-      display: flex;
-    }
-
-    .hamburger-menu {
+    
+    .navbar-hamburger-menu {
       display: block;
     }
   }
